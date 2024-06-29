@@ -62,7 +62,7 @@ Citizen.CreateThread(function()
         end
         --[[    Adjust Water Intensity    ]]--
         if UT.adjust_water.active then
-            WaterOverrideSetStrength(AD.adjust_water.value)
+            WaterOverrideSetStrength(UT.adjust_water.value)
         end
     end
 end)

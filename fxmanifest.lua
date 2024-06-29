@@ -17,6 +17,6 @@ dependencies { '/server:7290', 'oxmysql', 'ox_lib', 'ox_target' }
 ----    Manifest Information    ----
 shared_scripts { '@ox_lib/init.lua', 'shared/*.lua'}
 
-client_scripts { 'client/*.lua', 'client/data/adjust/*.lua', 'client/data/disable/*.lua' }
+client_scripts { 'client/*.lua', 'client/data/adjust/*.lua' }
 
 server_scripts { '@oxmysql/lib/MySQL.lua', 'server/*.lua',  }
