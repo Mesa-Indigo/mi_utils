@@ -1,9 +1,6 @@
 --[[    Adjusted Melee & Ranged Damage   ]]--
 AD = {}
 
---[[    Change Water Intensity    ]]--
-AD.adjust_water = { active = true, value = 0.6}
-
 --[[    Weapon Damage Choices    ]]--
 AD.adjust_damage = {
     melee = true, pistol = true, smg = true,
@@ -43,25 +40,34 @@ AD.adjust_shotgundamage = {
 }
 
 AD.adjust_rifledamage = {
-    
-}
-
-AD.adjust_sniperdamage = {
-    
+    assault = 0.18, assaultmk2 = 0.18, carbine = 0.18, carbinemk2 = 0.18,
+    advanced = 0.18, specialcarbine = 0.18, specialcarbinemk2 = 0.18, bullpup = 0.18,
+    bullpupmk2 = 0.18, compact = 0.18, military = 0.18, heavy = 0.18,
+    tactical = 0.18
 }
 
 AD.adjust_machinegundamage = {
-    
+    mg = 0.1, combatmg = 0.1, combatmgmk2 = 0.1, gunsenberg = 0.1
+}
+
+AD.adjust_sniperdamage = {
+    sniper = 0.35, hvysniper = 0.4, hvysnipermk2 = 0.4, marksman = 0.3,
+    marksmanmk2 = 0.3, precision = 0.35
 }
 
 AD.adjust_heavydamage = {
-    
+    rpg = 0.45, grenlaunch = 0.45, grenlaunchsmoke = 0.1, minigun = 0.04,
+    firework = 0.15, railgun = 0.45, homing = 0.45, compact = 0.35,
+    rayminigun = 0.08, emplaunch = 0.45, railgunxm3 = 0.45
 }
 
 AD.adjust_throwable = {
-    
+    grenade = 0.6, bzgas = 0.08, molotov = 0.5, stickybomb = 0.65,
+    proxmine = 0.65, snowball = 0.05, pipebomb = 0.45, ball = 0.05,
+    smokegas = 0.02, flare = 0.1, acidpack = 0.1
 }
 
 AD.adjust_misc = {
-    
+    gascan = 0.0, parachute = 0.0, fireext = 0.0, hazardcan = 0.0,
+    fertilizercan = 0.0
 }
