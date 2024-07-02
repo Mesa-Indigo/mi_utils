@@ -3,13 +3,6 @@ function RemoveWeaponDrops()
 	RemoveAllPickupsOfType(14)
 end
 
---[[    Disabling Idle Camera   ]]--
-AddEventHandler('onResourceStart', function()
-	if UT.disable_idlecam then
-		DisableIdleCamera(true)
-	end
-end)
-
 --[[    Adjust Player Skills   ]]--
 AddEventHandler('onResourceStart', function()
 	if UT.adjust_skills then
@@ -63,6 +56,10 @@ Citizen.CreateThread(function()
         --[[    Adjust Water Intensity    ]]--
         if UT.adjust_water.active then
             WaterOverrideSetStrength(UT.adjust_water.value)
+        end
+        --[[    Disabling Idle Camera   ]]--
+        if UT.disable_idlecam then
+            DisableIdleCamera(true)
         end
     end
 end)
