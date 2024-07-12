@@ -18,9 +18,18 @@ end
 -- delete shell function
 DeleteShell = function(shell)
     if not shell then
-        print('not shell to delete') return end
+        print('no shell to delete') return end
     DeleteEntity(shell)
     shell = nil
+end
+
+
+-- delete object function
+DeleteProp = function(prop)
+    if not prop then
+        print('no object to delete') return end
+    DeleteEntity(prop)
+    prop = nil
 end
 
 -- create object function
@@ -34,13 +43,13 @@ end
 -- delete object function
 DeleteObj = function(obj)
     if not obj then
-        print('not object to delete') return end
+        print('no object to delete') return end
     DeleteEntity(obj)
     obj = nil
 end
 
 -- create ped function
-CreateObj = function(ped, model, coord, head, anim)
+CreatePed = function(ped, model, coord, head, anim)
     ped = CreateObject(model, coord.x,
     coord.y, coord.z, true, false, false)
     SetEntityHeading(ped, head)
@@ -51,9 +60,9 @@ CreateObj = function(ped, model, coord, head, anim)
 end
 
 -- delete ped function
-DeleteObj = function(ped)
+DeletePed = function(ped)
     if not ped then
-        print('not object to delete') return end
+        print('no object to ped') return end
     DeleteEntity(ped)
     ped = nil
 end
