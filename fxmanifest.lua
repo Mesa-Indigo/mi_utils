@@ -15,8 +15,10 @@ description 'ox item handling script'
 dependencies { '/server:7290', '/onesync', 'ox_lib', 'ox_target' }
 
 --[[    manifest information    ]]--
-shared_scripts { '@ox_lib/init.lua', 'shared/*.lua', 'data/*.lua' }
+shared_scripts { '@ox_lib/init.lua', 'shared/*.lua' }
 
-client_scripts { 'client/**/*.lua' }
+client_scripts { 'client/**/*.lua', 'export/client.lua' }
 
-server_scripts { '@oxmysql/lib/MySQL.lua', 'server/**/*.lua' }
+export 'export/client.lua'
+
+server_scripts { '@oxmysql/lib/MySQL.lua', 'server/**/*.lua', 'export/server.lua' }
