@@ -4,6 +4,8 @@
 -- https://fontawesome.com/search?m=free&o=r For Choosing Icons
 -- https://overextended.dev/ox_lib/Modules/Interface/Client/notify Notification Documentation
 -- Colors: bgnd - 20% / main 70% / desc 90%
+
+--------------------------------
 ----    Notification Options    ----
 NotInfo = {
     position = 'top-right',

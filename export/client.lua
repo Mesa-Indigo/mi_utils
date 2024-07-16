@@ -1,52 +1,55 @@
--- teleport function
-Teleport = function(ped, x, y, z, w)
-    DoScreenFadeOut(100)
-    Citizen.Wait(1000)
-    SetEntityCoords(ped, x, y, z, false, false, false, false)
-    SetEntityHeading(ped, w)
-    DoScreenFadeIn(750)
-end
+-- export for teleporting player
+exports('mi_utils:c:teleport', function(ped, x, y, z, h)
+    DoScreenFadeOut(150) Citizen.Wait(1000)
+    SetEntityCoords(ped, x, y, z-1, false, false, false, false)
+    SetEntityHeading(ped, h) DoScreenFadeIn(750)
+end)
 
--- load shell function
-CreateShell = function(shell, model, coord, head)
-    shell = CreateObject(model, coord.x,
-    coord.y, coord.z, true, false, false)
-    SetEntityHeading(shell, head)
-    FreezeEntityPosition(shell, true)
-end
+-- export for creating a shell object
+exports('mi_utils:c:create:shell', function(shell, model, coord, head)
+    if Debug then
+        if shell == nil then
+            print('no shell object to spawn')
+        return end
+        if model == nil then
+            print('no model to reference for shell')
+        return end
+    end
+    shell = CreateObject(model, coord.x, coord.y, coord.z, true, false, false)
+    SetEntityHeading(shell, head) FreezeEntityPosition(shell, true)
+end)
 
--- delete shell function
-DeleteShell = function(shell)
-    if not shell then
-        print('no shell to delete') return end
-    DeleteEntity(shell)
-    shell = nil
-end
+-- export to delete shell
+exports('mi_utils:c:delete:shell', function(shell)
+    if Debug then
+        if shell == nil then
+            print('no shell to delete') return end
+    end
+    DeleteEntity(shell) shell = nil
+end)
 
+-- export for creating an object
+exports('mi_utils:c:create:object', function(obj, model, coord, head)
+    if Debug then
+        if obj == nil then
+            print('no shell object to spawn')
+        return end
+        if model == nil then
+            print('no model to reference for shell')
+        return end
+    end
+    obj = CreateObject(model, coord.x, coord.y, coord.z, true, false, false)
+    SetEntityHeading(obj, head) FreezeEntityPosition(obj, true)
+end)
 
--- delete object function
-DeleteProp = function(prop)
-    if not prop then
-        print('no object to delete') return end
-    DeleteEntity(prop)
-    prop = nil
-end
-
--- create object function
-CreateObj = function(obj, model, coord, head)
-    obj = CreateObject(model, coord.x,
-    coord.y, coord.z, true, false, false)
-    SetEntityHeading(obj, head)
-    FreezeEntityPosition(obj, true)
-end
-
--- delete object function
-DeleteObj = function(obj)
-    if not obj then
-        print('no object to delete') return end
-    DeleteEntity(obj)
-    obj = nil
-end
+-- export to delete object
+exports('mi_utils:c:delete:object', function(obj)
+    if Debug then
+        if obj == nil then
+            print('no shell to delete') return end
+    end
+    DeleteEntity(obj) obj = nil
+end)
 
 -- create ped function
 CreatePed = function(ped, model, coord, head, anim)
@@ -59,10 +62,11 @@ CreatePed = function(ped, model, coord, head, anim)
     SetEntityInvincible(ped, true)
 end
 
--- delete ped function
-DeletePed = function(ped)
-    if not ped then
-        print('no object to ped') return end
-    DeleteEntity(ped)
-    ped = nil
-end
+-- export to delete ped
+exports('mi_utils:c:delete:ped', function(ped)
+    if Debug then
+        if ped == nil then
+            print('no shell to delete') return end
+    end
+    DeleteEntity(ped) ped = nil
+end)
