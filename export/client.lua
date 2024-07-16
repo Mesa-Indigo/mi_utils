@@ -8,12 +8,9 @@ end)
 -- export for creating a shell object
 exports('mi_utils_c_create_shell', function(shell, model, coord, head)
     if Debug then
-        if shell == nil then
-            print('no shell object to spawn')
-        return end
         if model == nil then
             print('no model to reference for shell')
-        return end
+        end
     end
     shell = CreateObject(model, coord.x, coord.y, coord.z, true, false, false)
     SetEntityHeading(shell, head) FreezeEntityPosition(shell, true)
@@ -23,7 +20,7 @@ end)
 exports('mi_utils_c_delete_shell', function(shell)
     if Debug then
         if shell == nil then
-            print('no shell to delete') return end
+            print('no shell to delete') end
     end
     DeleteEntity(shell) shell = nil
 end)
@@ -33,10 +30,10 @@ exports('mi_utils_c_create_object', function(obj, model, coord, head)
     if Debug then
         if obj == nil then
             print('no object to spawn')
-        return end
+        end
         if model == nil then
             print('no model to reference for object')
-        return end
+        end
     end
     obj = CreateObject(model, coord.x, coord.y, coord.z, true, false, false)
     SetEntityHeading(obj, head) FreezeEntityPosition(obj, true)
@@ -46,13 +43,18 @@ end)
 exports('mi_utils_c_delete_object', function(obj)
     if Debug then
         if obj == nil then
-            print('no object to delete') return end
+            print('no object to delete')end
     end
     DeleteEntity(obj) obj = nil
 end)
 
 -- export for creating a ped
 exports('mi_utils_c_create_ped', function(ped, model, coord, head, anim)
+    if Debug then
+        if model == nil then
+            print('no model to reference for object')
+        end
+    end
     ped = CreateObject(model, coord.x,
     coord.y, coord.z, true, false, false)
     SetEntityHeading(ped, head)
@@ -66,7 +68,7 @@ end)
 exports('mi_utils_c_delete_ped', function(ped)
     if Debug then
         if ped == nil then
-            print('no ped to delete') return end
+            print('no ped to delete') end
     end
     DeleteEntity(ped) ped = nil
 end)
