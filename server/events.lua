@@ -7,8 +7,8 @@ AddEventHandler('ox:playerLoaded', function(source)
 
     if Debug then
         -- basic character information
-        print(locale('loading_user')..player.charId)
-        print(locale('loading_char')..player.stateId)
+        lib.print.info(locale('loading_user')..player.charId)
+        lib.print.info(locale('loading_char')..player.stateId)
     end
 
     

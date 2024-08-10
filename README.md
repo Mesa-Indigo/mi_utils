@@ -3,3 +3,7 @@
 WIP bridge & utility script
 
 **This does not work right now, don't use it. If you ask for help, I will call you a goober**
+
+
+## Discord
+(https://discord.gg/EtgZsVBtYB)
