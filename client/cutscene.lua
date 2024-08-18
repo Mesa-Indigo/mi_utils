@@ -52,5 +52,5 @@ AddEventHandler('miut:c:cutscene:into', function()
     elseif model == 'female' then
         generateplayer("MP_Female_Character", "MP_Male_Character", cache.ped)
     end
-
+    -- continue reference: https://github.com/Doublox/CutScene/blob/main/cutscene/cutscene.lua
 end)
