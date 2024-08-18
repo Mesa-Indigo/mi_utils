@@ -8,7 +8,7 @@ repository 'https://github.com/Mesa-Indigo/mi_utils'
 description 'utility script'
 
 --[[    dependancies    ]]--
-dependencies { '/server:7290', '/onesync', 'ox_lib', 'ox_core' }
+dependencies { '/server:7290', '/onesync', 'ox_lib', 'ox_core', 'oxmysql' }
 
 --[[    manifest information    ]]--
 shared_scripts { '@ox_lib/init.lua', '@ox_core/lib/init.lua', 'shared/*.lua', 'data/*.lua' }
