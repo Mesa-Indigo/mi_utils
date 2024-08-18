@@ -1,3 +1,3 @@
-RegisterCommand('checkjob', function()
-    TriggerServerEvent('miut:s:checkgroups')
+RegisterCommand('spawn', function()
+    TriggerEvent('miut:c:cutscene:into', 1)
 end, false)

@@ -11,15 +11,6 @@ AddEventHandler('ox:playerLoaded', function(source)
         lib.print.info(locale('loading_char')..player.stateId)
     end
 
+    TriggerClientEvent('miut:c:cutscene:into', 4)
 
-end)
-
-
--- get group for player
-RegisterNetEvent('miut:s:checkgroups')
-AddEventHandler('miut:s:checkgroups', function(source, id)
-    local player = Ox.GetPlayer()
-    if not player or not player.charId then return end
-    local group, rank = player.getGroup('airforce')
-    print('Group', group, rank)
 end)

@@ -8,13 +8,40 @@ repository 'https://github.com/Mesa-Indigo/mi_utils'
 description 'utility script'
 
 --[[    dependancies    ]]--
-dependencies { '/server:7290', '/onesync', 'ox_lib', 'ox_core', 'oxmysql' }
+dependencies { 
+    '/server:7290', '/onesync',
+    'ox_lib', 'ox_target', 'ox_core'
+}
 
 --[[    manifest information    ]]--
-shared_scripts { '@ox_lib/init.lua', '@ox_core/lib/init.lua', 'shared/*.lua', 'data/*.lua' }
+shared_scripts {
+    -- overextended dependancies
+    '@ox_lib/init.lua',
+    '@ox_core/lib/init.lua',
 
-client_scripts { '@ox_core/imports/client.lua', 'client/**/*.lua' }
+    -- core resources
+    'shared/*.lua',
+    'data/*.lua',
+    'utils/interface.lua'
+}
 
-server_scripts { '@oxmysql/lib/MySQL.lua', '@ox_core/imports/server.lua', 'server/**/*.lua' }
+client_scripts {
+    -- overextended dependancies
+    '@ox_core/imports/client.lua',
+
+    -- core resources
+    'client/**/*.lua',
+    'utils/client.lua'
+}
+
+server_scripts {
+    -- overextended dependancies
+    '@oxmysql/lib/MySQL.lua',
+    '@ox_core/imports/server.lua',
+
+    -- core resources
+    'server/**/*.lua',
+    'utils/server.lua'
+}
 
 files { 'locales/*.json' }
