@@ -1,8 +1,7 @@
+---@diagnostic disable: undefined-global
+
 -- shared data variables
 Shared, Data = {}, {}
-
--- utility resource variables
-Ifc, Cnt, Svr = {}, {}, {}
 
 -- ox variables
 Target, Inventory = exports.ox_target, exports.ox_inventory

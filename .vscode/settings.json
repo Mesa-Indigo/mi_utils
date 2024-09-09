@@ -1,8 +1,0 @@
-{
-    "Lua.diagnostics.globals": [
-        "Ox",
-        "lib",
-        "locale",
-        "cache"
-    ]
-}
